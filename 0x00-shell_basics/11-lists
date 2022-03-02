@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(ls -alr /boot /root/alx-system_engineering-devops /root/alx-system_engineering-devops/0x00-shell_basics)"
+echo "$(ls -alU /root/alx-system_engineering-devops/0x00-shell_basics /root/alx-system_engineering-devops /boot)"
