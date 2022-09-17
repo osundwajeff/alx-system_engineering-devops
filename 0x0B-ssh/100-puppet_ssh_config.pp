@@ -4,7 +4,7 @@ exec { 'Turn off passwd auth':
   path    => 'usr/bin:/usr/sbin:/bin'
 }
 exec { 'Declare identity file':
-  command => 'bash -c "echo IdentityFile \'~/.ssh/school\' >> /etc/ssh/ssh_congig"',
+  command => 'bash -c "echo IdentityFile \'~/.ssh/school\' >> /etc/ssh/ssh_config"',
   path    => '/usr/bin:/usr/sbin:/bin'
 }
 exec { 'Turn on pubkey auth':
