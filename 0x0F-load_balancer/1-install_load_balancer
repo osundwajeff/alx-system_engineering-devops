@@ -10,6 +10,12 @@ INIT_FILE="/etc/default/haproxy"
 CONFIG_FILE="/etc/haproxy/haproxy.cfg"
 HAPROXY_LB_CONFIG=\
 "
+defaults
+  mode http
+  timeout client 10s
+  timeout connect 5s
+  timeout server 10s
+
 #--$DOMAIN_NAME-params-begin--
 backend $DOMAIN_NAME-backend
         balance roundrobin
