@@ -9,8 +9,8 @@ def top_ten(subreddit):
     url = "https://www.reddit.com/r/" + subreddit + "/hot.json?limit=10"
     res = requests.get(url, headers=header)
     if res.status_code == 200:
-        for i in res.json().get("data", None).get("children", None):
-            print(i.get("data", None).get("title", None))
+        for i in res.json()["data"]["children"]:
+            print(i["data"]["title"])
     else:
         return None
 
