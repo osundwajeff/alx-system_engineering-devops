@@ -10,7 +10,7 @@ def top_ten(subreddit):
     res = requests.get(url, headers=header)
     if res.status_code == 200:
         for i in res.json().get("data", None).get("children", None):
-            print (i.get("data", None).get("title", None))
+            print(i.get("data", None).get("title", None))
     else:
         return None
 
