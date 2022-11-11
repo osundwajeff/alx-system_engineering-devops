@@ -1,10 +1,6 @@
 # Puppet
 # tests how nginx is featuring
-exec { 'fixer':
-    command => 'sed -i s/15/1024 /etc/default/nginx',
-    path    => '/bin',
-}
-service { 'nginx':
-    ensure    => running,
-    subscribe => Exec['fixer'],
+# exec { 'fix--for-nginx':
+  command => "sed -i 's/worker_processes 4;/worker_processes 7;/g' /etc/nginx/nginx.conf; sudo service nginx restart",
+  path    => ['/bin', '/usr/bin', '/usr/sbin']
 }
